@@ -1,0 +1,26 @@
+{
+  "name": "group-project-sirasitxp",
+  "version": "1.0.0",
+  "description": "This is a GROUP assignment.  Get the starting repository here.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CSC317-S25/group-project-sirasitxp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CSC317-S25/group-project-sirasitxp/issues"
+  },
+  "homepage": "https://github.com/CSC317-S25/group-project-sirasitxp#readme",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.1"
+  }
+}

@@ -1,5 +1,86 @@
 <!DOCTYPE html>
-<html>
-<head><title>Booking</title></head>
-<body><h1>Book an Appointment</h1></body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PetPaws Grooming – Book</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="booking-page-body">
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">PetPaws Grooming</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/booking">Book</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+        <a href="/auth/signup" aria-label="Account">
+          <svg height="20" width="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Booking Form -->
+  <section class="booking-form-section">
+    <h2>Book an Appointment</h2>
+    <form action="/booking" method="POST" class="booking-form">
+      <!-- Row 1: Your Name | Email -->
+      <div class="form-group">
+        <label for="clientName">Your Name</label>
+        <input type="text" id="clientName" name="clientName" placeholder="e.g. Andrew Scott" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      </div>
+
+      <!-- Row 2: Phone | Pet’s Name -->
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+      </div>
+      <div class="form-group">
+        <label for="petName">Pet’s Name</label>
+        <input type="text" id="petName" name="petName" placeholder="e.g. Fluffy" required>
+      </div>
+
+      <!-- Row 3: Service | Date & Time -->
+      <div class="form-group">
+        <label for="service">Select Service</label>
+        <select id="service" name="service" required>
+          <option value="">— choose one —</option>
+          <option>Bath & Brush</option>
+          <option>Haircut & Styling</option>
+          <option>Nail Trim & Paw Care</option>
+          <option>Ultimate Spa Package</option>
+        </select>
+      </div>
+      <div class="form-group">
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" name="date" required>
+      </div>
+
+      <!-- Full-width: Additional Notes -->
+      <div class="form-group full-width">
+        <label for="notes">Additional Notes</label>
+        <textarea id="notes" name="notes" rows="3" placeholder="Any special requests…"></textarea>
+      </div>
+
+      <!-- Full-width: Submit Button -->
+      <div class="form-group full-width">
+        <button type="submit" class="btn booking-submit">Submit Booking</button>
+      </div>
+    </form>
+  </section>
+
+  <script src="/js/booking.js"></script>
+</body>
 </html>

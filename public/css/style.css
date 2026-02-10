@@ -1,1 +1,599 @@
-/* Style your site here */
+/* reset & fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  html, body {
+    width: 100% !important;
+    height: 100vh !important;  
+  }
+  
+  /* HERO */
+  .hero {
+    position: relative;
+    height: 100vh;
+    background: url('../img/hero.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+    padding: 2rem;
+    color: #fff;
+  }
+  
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: 150px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s, color 0.3s;
+  }
+  .btn:hover {
+    background: #fff;
+    color: #000;
+  }
+  
+  /* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    padding-top: 20px;
+    z-index: 10;
+  }
+  
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Logo as text */
+  .nav-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  .nav-logo:hover {
+    color: #FFD700;    /* accent color */
+    transform: translateY(-2px);
+  }
+  
+  /* Links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  .nav-links a {
+    color: rgba(255,255,255,0.9);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: #FFD700;
+    transition: width 0.3s ease;
+  }
+  .nav-links a:hover {
+    color: #fff;
+  }
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+  
+  /* Icons */
+  .nav-icons {
+    display: flex;
+    gap: 1rem;
+  }
+  .nav-icons a {
+    color: rgba(255,255,255,0.9);
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  .nav-icons a:hover {
+    color: #FFD700;
+    transform: scale(1.1);
+  }
+  
+  /* PAGE HEADER */
+.page-header {
+    text-align: center;
+    padding: 4rem 2rem 2rem;
+    background: #fafafa;
+  }
+  .page-header h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  .page-header p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* SERVICES GRID */
+
+  .services-hero {
+  position: relative;
+  height: 50vh;                                   /* top half */
+  background: url('../img/services.jpg')       /* place your image here */
+              no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.services-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+.services-hero .hero-text {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 0 1rem;
+}
+.services-hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.services-hero p {
+  font-size: 1.1rem;
+}
+
+/* --------------------
+   SERVICES CARDS
+   -------------------- */
+.services-section {
+  min-height: 50vh;        /* bottom half (or more if content overflows) */
+  background: #fafafa;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+  .services-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .service-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  
+  .service-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .service-card h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.25rem;
+    color: #333;
+  }
+  
+  .service-card p {
+    padding: 0 1rem 1.5rem;
+    font-size: 0.95rem;
+    color: #555;
+  }
+
+  .icon-wrapper {
+    margin: 1.5rem auto 1rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+  
+  .icon-wrapper:hover {
+    background: rgba(255,255,255,0.2);
+  }
+  
+  .icon {
+    width: 32px;
+    height: 32px;
+    stroke: #FFD700;    /* accent color */
+  }
+
+  .booking-page-body {
+    display: flex;
+    align-items: center;     /* vertical center */
+    justify-content: center; /* horizontal center */
+    background: 
+      linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+      url('../img/booking.jpg') no-repeat center center/cover;
+  }
+  
+  /* BOOKING FORM */
+  .booking-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  /* make any .form-group.full-width span both columns */
+  .booking-form .full-width {
+    grid-column: 1 / -1;
+  }
+  
+  /* basic styling */
+  .booking-form-section {
+    max-width: 600px;
+    margin: 8rem auto 5rem;      /* push below navbar */
+    background-color: rgba(255,255,255,0.9);
+    padding: 2.5rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  }
+  
+  .booking-form-section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  /* form-group no longer needs bottom margin (grid gap handles it) */
+  .booking-form .form-group {
+    margin: 0;
+  }
+  
+  /* label/input styling */
+  .booking-form label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+    color: #444;
+  }
+  
+  .booking-form input,
+  .booking-form select,
+  .booking-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+  }
+  
+  .booking-form input:focus,
+  .booking-form select:focus,
+  .booking-form textarea:focus {
+    outline: none;
+    border-color: #FFD700;
+  }
+  
+  /* submit button spans full width */
+  .booking-submit {
+    display: block;
+    width: 100%;
+    padding: 0.9rem;
+    background: #FFD700;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .booking-submit:hover {
+    background: #e6c200;
+  }
+
+  /* ABOUT PAGE BODY */
+.about-page-body {
+  display: flex;
+  align-items: center;             /* vertically center text */
+  justify-content: flex-end;       /* push text to the right */
+    background: 
+      linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+      url('../img/about.jpg') no-repeat center center/cover;
+}
+
+/* ABOUT SECTION */
+:root {
+  --nav-height: 70px;            /* height of the navbar */
+}
+
+.about-section {
+  position: relative;
+  height: 100vh;                                   /* full viewport */
+  padding-top: var(--nav-height);                  /* push content below nav */
+  background-size: cover;
+  display: flex;
+  align-items: center;         /* vertical center of remaining area */
+  justify-content: flex-end;   /* text on the right */
+  padding-left: 2rem;
+  padding-right: 6rem;  
+}
+
+/* The text panel */
+.about-text {
+  max-width: 500px;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Headings and list items in white for contrast */
+.about-text h3,
+.about-text p,
+.about-text ul,
+.about-text li {
+  color: #fff;
+}
+
+/* Tweak spacing inside the text */
+.about-text h3 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+.about-text p {
+  margin-bottom: 1rem;
+}
+.about-text ul {
+  list-style: disc inside;
+  margin-bottom: 1rem;
+}
+.about-text li {
+  margin-bottom: 0.5rem;
+}
+
+/* CONTACT PAGE BODY */
+.contact-page-body {
+  background: 
+      linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+      url('../img/contact.jpg') no-repeat center center/cover;
+  color: #333;
+  width: 100%;
+  height: 100vh;              
+  position: fixed;                     /* full viewport */
+  
+}
+
+/* CONTACT SECTION LAYOUT */
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto 4rem;
+  padding: 0 2rem;
+  align-items: flex-start;
+  
+}
+
+/* CONTACT INFO (left column) */
+.contact-info {
+  padding-left: 15rem;
+  flex: 1 1 300px;
+  color: #fff;
+
+}
+.contact-info h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+.contact-info p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  color: #fff;
+
+}
+
+/* CONTACT FORM (right column) */
+.contact-form {
+  flex: 1 1 400px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.contact-form h3 {
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+}
+
+/* reuse your booking-form grid styles */
+.contact-form form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 1.5rem;
+}
+.contact-form form .full-width {
+  grid-column: 1 / -1;
+}
+.contact-form label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.2s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #FFD700;
+}
+
+/* CONTACT BUTTON */
+.contact-submit {
+  display: block;
+  width: 100%;
+  padding: 0.9rem;
+  background: #FFD700;
+  color: #ffffff; 
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.contact-submit:hover {
+  background: #e6c200;
+}
+
+body.contact-page-body .page-header {
+  background: transparent;
+  padding: 4rem 2rem;       /* adjust vertical space */
+  margin-top: 4rem;                /* remove any extra margins */
+  text-align: center;       /* center your headline */
+  color: #a09e9e !important;              /* dark text on light background */
+
+}
+
+#h2-contact {
+  color: #fff !important; /* white text */
+}
+
+body.contact-page-body .contact-section {
+  flex: 1 1 auto;
+  overflow-y: auto;
+}
+
+
+.auth-page {
+  background: #f9f9f9;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.auth-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.auth-form button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-form button:hover {
+  background-color: #45a049;
+}
+
+.auth-footer {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.back-btn {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: white;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  text-decoration: none;
+  color: #333;
+  font-size: 1.25rem;
+}

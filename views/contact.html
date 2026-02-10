@@ -1,5 +1,80 @@
 <!DOCTYPE html>
-<html>
-<head><title>Contact</title></head>
-<body><h1>Contact Us</h1></body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PetPaws Grooming – Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="contact-page-body">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">PetPaws Grooming</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/booking">Book</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+        <a href="/auth/signup" aria-label="Account">
+          <svg height="20" width="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <h2 id="h2-contact">Contact Us</h2>
+    <p id="h2-contact">We’d love to hear from you—drop us a line or visit our salon!</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <!-- Left: Contact Info -->
+    <div class="contact-info">
+      <h3>Get in Touch</h3>
+      <p><strong>Address:</strong><br>
+         123 Bark Street<br>
+         Tailtown, TT 45678</p>
+      <p><strong>Phone:</strong><br>
+         (555) 987-6543</p>
+      <p><strong>Email:</strong><br>
+         hello@petpaws.com</p>
+      <p><strong>Hours:</strong><br>
+         Mon–Sat: 8am – 6pm<br>
+         Sun: Closed</p>
+    </div>
+
+    <!-- Right: Contact Form -->
+    <div class="contact-form">
+      <h3>Send Us a Message</h3>
+      <form action="/contact" method="POST">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email2">Your Email</label>
+          <input type="email" id="email2" name="email" required>
+        </div>
+        <div class="form-group full-width">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <div class="form-group full-width">
+          <button type="submit" class="btn contact-submit">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <script src="/js/main.js"></script>
+</body>
 </html>
